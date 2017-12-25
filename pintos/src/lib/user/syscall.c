@@ -182,3 +182,7 @@ inumber (int fd)
 {
   return syscall1 (SYS_INUMBER, fd);
 }
+
+int have_job(int name, int time_amount){
+  return syscall2 (HAVE_JOB, name, time_amount);
+}

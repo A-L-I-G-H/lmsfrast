@@ -18,6 +18,7 @@ void sema_up (struct semaphore *);
 void sema_self_test (void);
 
 struct my_lock{                 /* lock for using in scheduler. */
+  int name_num;
   int sum_of_jobs;
   struct semaphore semaphore;
 }
