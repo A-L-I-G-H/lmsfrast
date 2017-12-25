@@ -172,6 +172,12 @@ sema_test_helper (void *sema_)
    acquire and release it.  When these restrictions prove
    onerous, it's a good sign that a semaphore should be used,
    instead of a lock. */
+my_lock_init(struct my_lock* my_lock, int name){
+  sema_init(&my_lock -> semaphore, 1);
+  my_lock -> sum_of_jobs = 0;
+  my_lock -> name_num = name;
+}
+
 void
 lock_init (struct lock *lock)
 {
