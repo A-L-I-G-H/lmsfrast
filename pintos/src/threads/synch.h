@@ -21,7 +21,7 @@ struct my_lock{                 /* lock for using in scheduler. */
   int name_num;
   int sum_of_jobs;
   struct semaphore semaphore;
-}
+};
 
 /* Lock. */
 struct lock 
